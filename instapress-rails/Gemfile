@@ -53,3 +53,8 @@ end
 
 gem 'bootstrap-sass'
 gem 'sprockets'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
