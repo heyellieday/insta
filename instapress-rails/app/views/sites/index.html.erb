@@ -1,2 +1,29 @@
-<h1>Sites#index</h1>
-<p>Find me in app/views/sites/index.html.erb</p>
+<p>
+  <strong>Title:</strong>
+    <%= @user.email %>
+</p>
+ 
+<p>
+ 
+<h2>Sites</h2>
+<% @user.sites.each do |site| %>
+  <p>
+    <strong>Site Url:</strong>
+      <%= site.admin_email %>
+  </p>
+<% end %>
+ 
+<h2>Add a Site:</h2>
+<%= form_for([@user, @user.sites.build]) do |f| %>
+  <p>
+      <%= f.label :site_title %><br>
+      <%= f.text_field :site_title %>
+  </p>
+  <p>
+    <%= f.label :wp_siteurl %><br>
+      <%= f.text_field :wp_siteurl %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
