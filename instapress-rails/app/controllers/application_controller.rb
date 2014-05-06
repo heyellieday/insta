@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  include SessionsHelper
   protect_from_forgery with: :exception
-   
-    before_filter :authenticate_user!
-  # This filter could go anywhere the user needs to have a valid email address to access
 end
